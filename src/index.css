@@ -7,7 +7,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #8080ff;
+  background-color: #e5e5ec;
 }
 svg {
   position: absolute;
@@ -55,7 +55,7 @@ code {
   border-radius: 10px;
   box-shadow: 0 8px 15px 0 rgba(0, 0, 0, 0.2), 0 8px 30px 0 rgba(0, 0, 0, 0.19);
   border-width: 0;
-  background-color: #ff337d;
+  background-color: tomato;
   font-size: 1rem;
   color: #fff;
 }
