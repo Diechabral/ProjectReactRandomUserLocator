@@ -82,7 +82,11 @@ class App extends React.Component {
                                 </h1>
 
                             </div>
-                            
+                            <button className='random-btn' 
+                            // onClick={() => this.repeat()}
+                            >
+                                Localize Usuario
+                            </button>
                         </div>
                     );
                 });
