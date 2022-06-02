@@ -9,6 +9,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: #e5e5ec;
 }
+
 svg {
   position: absolute;
   top: 40%;
@@ -31,6 +32,7 @@ svg {
   from {
     transform: rotate(-60deg);
   }
+
   to {
     transform: rotate(300deg);
   }
@@ -58,4 +60,6 @@ code {
   background-color: tomato;
   font-size: 1rem;
   color: #fff;
+  cursor: pointer;
+
 }
