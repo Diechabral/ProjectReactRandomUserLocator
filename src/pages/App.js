@@ -1,4 +1,6 @@
 import React from "react";
+import { Switch, Route, Link } from 'react-router-dom'
+import Map from "./Map";
 
 class App extends React.Component {
     constructor(props) {
@@ -8,6 +10,7 @@ class App extends React.Component {
             loading: true,
         };
     }
+
 
     repeat() {
         if (this.state.loading === true) {
@@ -20,7 +23,13 @@ class App extends React.Component {
             .then((data) => {
                 let pictures = data.results.map((person) => {
                     return (
+
                         <div>
+                            <>
+                                <Switch>
+                                    <Route path='/locate' Component={Map} />
+                                </Switch>
+                            </>
                             <div key={person.results}>
                                 <img
                                     src={person.picture.large}
@@ -82,11 +91,14 @@ class App extends React.Component {
                                 </h1>
 
                             </div>
-                            <button className='random-btn' 
-                            // onClick={() => this.repeat()}
-                            >
-                                Localize Usuario
-                            </button>
+
+                            <Link to='/locate'>
+                                <button className='random-btn'
+                                // onClick={() => this.repeat()}
+                                >
+                                    Localize Usuario
+                                </button>
+                            </Link>
                         </div>
                     );
                 });

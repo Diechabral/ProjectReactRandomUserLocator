@@ -7,7 +7,9 @@ import Map from "./pages/Map";
 
 
 ReactDOM.render(
-    <App />
+    <BrowserRouter>
+        <App />
+    </BrowserRouter>
 
 
     , document.getElementById("root"));
