@@ -13,15 +13,3 @@ ReactDOM.render(
 
 
     , document.getElementById("root"));
-
-// const root = ReactDOM.createRoot(
-//     document.getElementById("root")
-// );
-// root.render(
-//     <BrowserRouter>
-//         <Routes>
-//             <Route path="/" element={<App />}></Route>
-//             <Route path="/map" element={<Map />}></Route>
-//         </Routes>
-//     </BrowserRouter >
-// );

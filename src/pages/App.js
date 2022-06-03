@@ -26,9 +26,9 @@ class App extends React.Component {
 
                         <div>
                             <>
-                                <Switch>
+                                {/* <Switch>
                                     <Route path='/locate' Component={Map} />
-                                </Switch>
+                                </Switch> */}
                             </>
                             <div key={person.results}>
                                 <img
