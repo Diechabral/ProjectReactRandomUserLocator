@@ -1,6 +1,5 @@
 import React from "react";
-import { Switch, Route, Link } from 'react-router-dom'
-import Map from "./Map";
+import { Link } from 'react-router-dom'
 
 class App extends React.Component {
     constructor(props) {
@@ -11,7 +10,6 @@ class App extends React.Component {
         };
     }
 
-
     repeat() {
         if (this.state.loading === true) {
             this.setState({ loading: false });
@@ -21,16 +19,11 @@ class App extends React.Component {
                 return results.json();
             })
             .then((data) => {
-                let pictures = data.results.map((person) => {
+                let pictures = data.results.map((person, key) => {
                     return (
 
-                        <div>
-                            <>
-                                {/* <Switch>
-                                    <Route path='/locate' Component={Map} />
-                                </Switch> */}
-                            </>
-                            <div key={person.results}>
+                        <div  key={key}>
+                            <div>
                                 <img
                                     src={person.picture.large}
                                     className='profile-pic'
@@ -92,10 +85,8 @@ class App extends React.Component {
 
                             </div>
 
-                            <Link to='/locate'>
-                                <button className='random-btn'
-                                // onClick={() => this.repeat()}
-                                >
+                            <Link to="/locate" state={person.location.coordinates}>
+                                <button type="button" className='random-btn'>
                                     Localize Usuario
                                 </button>
                             </Link>
@@ -149,7 +140,7 @@ class App extends React.Component {
                     focusable="false"
                     data-prefix="far"
                     data-icon="spinner-third"
-                    class="svg-inline--fa fa-spinner-third fa-w-16"
+                    className="svg-inline--fa fa-spinner-third fa-w-16"
                     role="img"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 512 512"
@@ -166,7 +157,7 @@ class App extends React.Component {
                     focusable="false"
                     data-prefix="far"
                     data-icon="spinner-third"
-                    class="svg-inline--fa fa-spinner-third fa-w-16"
+                    className="svg-inline--fa fa-spinner-third fa-w-16"
                     role="img"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 512 512"
